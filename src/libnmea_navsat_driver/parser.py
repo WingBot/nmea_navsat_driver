@@ -206,6 +206,7 @@ def convert_knots_to_mps(knots):
     Returns:
         The value of safe_float(knots) converted from knots to meters/second.
     """
+    "1节(knot) = 1海里/小时 = 1852 m/小时 = 1852/3600 m/s = 0.5144 m/s"
     return safe_float(knots) * 0.514444444444
 
 
