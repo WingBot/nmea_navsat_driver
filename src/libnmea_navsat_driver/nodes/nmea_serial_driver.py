@@ -64,6 +64,9 @@ def main():
             driver = RosNMEADriver()
             while not rospy.is_shutdown():
                 data = GPS.readline().strip()
+                rospy.loginfo_once("**************************************")
+                rospy.loginfo_once("   The RTK is opened successfully!")
+                rospy.loginfo_once("**************************************")
                 try:
                     driver.add_sentence(data, frame_id)
                 except ValueError as e:
